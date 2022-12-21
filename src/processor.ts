@@ -107,6 +107,7 @@ function extractTransferRecords(ctx: Ctx): TransferRecord[] {
           });
         }
         if (event.__kind === "ValueUpdated") {
+          ctx.log.debug("ValueUpdated item found");
         }
       }
     }

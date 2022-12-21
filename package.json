@@ -4,8 +4,9 @@
   "scripts": {
     "build": "rm -rf lib && tsc",
     "db:migrate": "npx squid-typeorm-migration apply",
-    "processor:start": "node lib/processor.js",
-    "query-node:start": "squid-graphql-server",
+    "update": "npx npm-check-updates --filter /subsquid/ --upgrade && npm i -f",
+    "squid-etl:start": "node lib/processor.js",
+    "squid-api:start": "squid-graphql-server",
     "lint": "eslint . --ext .ts --ignore-path .gitignore --ignore-pattern src/abi/**/*  --fix"
   },
   "dependencies": {
